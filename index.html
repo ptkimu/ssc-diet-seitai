@@ -1,0 +1,453 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>SSCダイエット整体</title>
+<meta name="description" content="神泉・道玄坂のダイエット整体。整体・栄養相談・運動指導・美容機器を、専属担当がまとめておまかせで。産後ダイエットコースは赤ちゃん連れOK。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;700&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap">
+<style>
+:root{
+  color-scheme:light;
+  --bg:#F2F4F2;
+  --surface:#FFFFFF;
+  --ink:#1E2A28;
+  --muted:#5B6A66;
+  --line:#D3DBD8;
+  --accent:#2E6A5C;
+  --accent-ink:#FFFFFF;
+  --accent-soft:#E1ECE8;
+  --blush:#F3E4DE;
+  --blush-ink:#7A4636;
+  --serif:"Shippori Mincho","Hiragino Mincho ProN","Yu Mincho",serif;
+  --sans:"Zen Kaku Gothic New","Hiragino Sans","Yu Gothic","Meiryo",sans-serif;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    color-scheme:dark;
+    --bg:#121918;--surface:#1A2321;--ink:#E6ECEA;--muted:#9DABA7;--line:#2E3B38;
+    --accent:#7FC0AE;--accent-ink:#0F1715;--accent-soft:#1F302C;--blush:#2D2220;--blush-ink:#E9B6A6;
+  }
+}
+:root[data-theme="dark"]{
+  color-scheme:dark;
+  --bg:#121918;--surface:#1A2321;--ink:#E6ECEA;--muted:#9DABA7;--line:#2E3B38;
+  --accent:#7FC0AE;--accent-ink:#0F1715;--accent-soft:#1F302C;--blush:#2D2220;--blush-ink:#E9B6A6;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:72px}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 16px/1.85 var(--sans);letter-spacing:.02em;-webkit-text-size-adjust:100%}
+img{max-width:100%}
+a{color:var(--accent)}
+a:focus-visible,.btn:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:4px}
+.wrap{max-width:1040px;margin:0 auto;padding-inline:20px}
+h1,h2,h3{font-family:var(--serif);font-weight:700;line-height:1.4;text-wrap:balance;margin:0}
+h2{font-size:clamp(1.5rem,1.2rem + 1.4vw,2.1rem)}
+h3{font-size:1.15rem}
+p{margin:0}
+.eyebrow{font-size:.78rem;letter-spacing:.18em;color:var(--accent);font-weight:700}
+.lead{color:var(--muted);max-width:38em}
+.num{font-variant-numeric:tabular-nums}
+
+/* header */
+.site-head{position:sticky;top:env(safe-area-inset-top,0px);z-index:10;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.site-head .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:60px}
+.logo{font-family:var(--serif);font-weight:700;font-size:1.1rem;color:var(--ink);text-decoration:none;white-space:nowrap}
+.logo small{display:block;font-family:var(--sans);font-size:.66rem;letter-spacing:.14em;color:var(--muted);font-weight:500;line-height:1.2}
+.nav{display:flex;gap:20px;font-size:.88rem}
+.nav a{color:var(--ink);text-decoration:none}
+.nav a:hover{color:var(--accent)}
+@media (max-width:760px){.nav{display:none}}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:12px 22px;border-radius:999px;background:var(--accent);color:var(--accent-ink);font-weight:700;text-decoration:none;font-size:.95rem;border:1px solid var(--accent);white-space:nowrap}
+.btn.ghost{background:transparent;color:var(--accent)}
+.btn.sm{padding:8px 16px;font-size:.85rem}
+
+section{padding-block:72px}
+section+section{border-top:1px solid var(--line)}
+.sec-head{display:flex;flex-direction:column;gap:12px;margin-bottom:36px}
+
+/* hero */
+.hero{padding-block:64px 72px;border-top:0}
+.hero .wrap{display:grid;grid-template-columns:1.25fr 1fr;gap:48px;align-items:center}
+.hero h1{font-size:clamp(2.1rem,1.4rem + 3.4vw,3.6rem);line-height:1.3;letter-spacing:.04em}
+.hero h1 span{display:block}
+.hero .copy{display:flex;flex-direction:column;gap:24px}
+.hero .ctas{display:flex;flex-wrap:wrap;gap:12px}
+.area{font-size:.85rem;color:var(--muted)}
+.promise{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:28px;display:flex;flex-direction:column;gap:18px}
+.promise .big{font-family:var(--serif);font-size:1.35rem;line-height:1.6}
+.stack{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
+.stack div{background:var(--accent-soft);border-radius:10px;padding:12px 14px;font-size:.88rem;line-height:1.5}
+.stack b{display:block;font-size:.98rem;color:var(--ink)}
+.stack span{color:var(--muted);font-size:.8rem}
+@media (max-width:820px){.hero .wrap{grid-template-columns:1fr;gap:32px}}
+
+/* worries */
+.worries{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px;list-style:none;margin:0;padding:0}
+.worries li{display:flex;gap:12px;align-items:flex-start;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:16px 18px;line-height:1.6}
+.worries li::before{content:"";flex:0 0 18px;height:18px;margin-top:3px;border:1.5px solid var(--accent);border-radius:4px}
+.answer{margin-top:28px;font-family:var(--serif);font-size:1.2rem}
+
+/* features */
+.features{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:28px}
+.feature{display:flex;flex-direction:column;gap:10px;padding-top:18px;border-top:2px solid var(--accent)}
+.feature p{color:var(--muted);font-size:.93rem}
+
+/* courses */
+.course-group{display:flex;flex-direction:column;gap:14px}
+.course-group+.course-group{margin-top:48px}
+.group-title{display:flex;flex-wrap:wrap;align-items:baseline;gap:8px 16px}
+.group-title p{color:var(--muted);font-size:.9rem}
+.plans{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px}
+.plan{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:22px;display:flex;flex-direction:column;gap:10px}
+.plan.featured{border:2px solid var(--accent)}
+.plan .tag{align-self:flex-start;font-size:.72rem;font-weight:700;letter-spacing:.08em;padding:2px 10px;border-radius:999px;background:var(--accent-soft);color:var(--accent)}
+.plan .meta{font-size:.85rem;color:var(--muted)}
+.plan .price{font-size:1.6rem;font-weight:700;font-variant-numeric:tabular-nums;line-height:1.2;margin-top:auto}
+.plan .price small{font-size:.8rem;font-weight:500;color:var(--muted)}
+.plan p.desc{font-size:.9rem;color:var(--muted)}
+.upsell{margin-top:14px;font-size:.9rem;color:var(--muted)}
+
+/* postpartum */
+.postpartum{background:var(--blush)}
+.postpartum .eyebrow{color:var(--blush-ink)}
+.pp-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start}
+@media (max-width:820px){.pp-grid{grid-template-columns:1fr}}
+.baby{display:inline-flex;align-items:center;gap:8px;background:var(--surface);color:var(--blush-ink);font-weight:700;border-radius:999px;padding:6px 16px;font-size:.9rem;align-self:flex-start}
+.pp-list{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:12px}
+.pp-list li{background:var(--surface);border-radius:12px;padding:16px 18px;line-height:1.65;font-size:.93rem}
+.pp-list b{display:block;font-size:1rem}
+.pp-copy{display:flex;flex-direction:column;gap:18px}
+.pp-plans{margin-top:40px}
+.pp-plans .plan{border-color:transparent}
+.safety{margin-top:28px;font-size:.88rem;color:var(--muted);background:var(--surface);border-radius:12px;padding:16px 18px}
+.safety b{color:var(--ink)}
+
+/* flow */
+.flow{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px;counter-reset:step}
+.flow li{counter-increment:step;display:flex;flex-direction:column;gap:6px;padding:20px;background:var(--surface);border:1px solid var(--line);border-radius:14px}
+.flow li::before{content:"STEP " counter(step);font-size:.72rem;font-weight:700;letter-spacing:.14em;color:var(--accent)}
+.flow p{font-size:.9rem;color:var(--muted)}
+
+/* staff */
+.staff{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px}
+.person{display:flex;gap:18px;align-items:flex-start}
+.avatar{flex:0 0 72px;height:72px;border-radius:50%;background:var(--accent-soft);display:grid;place-items:center;font-family:var(--serif);font-size:1.6rem;color:var(--accent)}
+.person p{font-size:.92rem;color:var(--muted)}
+.person h3 small{font-family:var(--sans);font-size:.78rem;color:var(--muted);font-weight:500;margin-left:6px}
+.note-inline{margin-top:20px;font-size:.88rem;color:var(--muted)}
+
+/* notes */
+.notes{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:10px;font-size:.9rem;color:var(--muted);max-width:46em}
+.notes li{padding-left:1.2em;text-indent:-1.2em}
+.notes li::before{content:"※";margin-right:.2em}
+
+/* reserve */
+.reserve{background:var(--accent);color:var(--accent-ink)}
+.reserve h2,.reserve .eyebrow{color:var(--accent-ink)}
+.reserve .lead{color:inherit;opacity:.85}
+.reserve .wrap{display:grid;grid-template-columns:1.2fr 1fr;gap:40px;align-items:center}
+@media (max-width:820px){.reserve .wrap{grid-template-columns:1fr}}
+.contact{background:var(--surface);color:var(--ink);border-radius:16px;padding:24px;display:flex;flex-direction:column;gap:14px}
+.contact dl{margin:0;display:grid;grid-template-columns:auto 1fr;gap:8px 16px;font-size:.92rem}
+.contact dt{color:var(--muted)}
+.contact dd{margin:0}
+.todo{background:var(--blush);color:var(--blush-ink);border-radius:4px;padding:0 6px;font-size:.85em}
+
+footer{padding-block:32px;font-size:.8rem;color:var(--muted)}
+footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
+</style>
+</head>
+<body>
+
+<header class="site-head">
+  <div class="wrap">
+    <a class="logo" href="#top">SSCダイエット整体<small>SHINSEN · DOGENZAKA</small></a>
+    <nav class="nav" aria-label="ページ内">
+      <a href="#about">特長</a>
+      <a href="#courses">コース・料金</a>
+      <a href="#postpartum">産後ダイエット</a>
+      <a href="#staff">担当者</a>
+    </nav>
+    <a class="btn sm" href="#reserve">予約する</a>
+  </div>
+</header>
+
+<main id="top">
+
+<section class="hero">
+  <div class="wrap">
+    <div class="copy">
+      <p class="eyebrow">神泉・道玄坂のダイエット整体</p>
+      <h1><span>がんばらない人の、</span><span>ボディメイク。</span></h1>
+      <p class="lead">整体、栄養相談、運動指導、美容機器。体づくりに必要なことを、専属の担当者がまとめて組み立てます。あなたは通うだけ。おまかせで、ラクな体へ。</p>
+      <div class="ctas">
+        <a class="btn" href="#reserve">からだ点検コースを予約（初回 ¥5,000）</a>
+        <a class="btn ghost" href="#courses">コースと料金を見る</a>
+      </div>
+      <p class="area">京王井の頭線 神泉駅・渋谷 道玄坂エリア</p>
+    </div>
+    <aside class="promise" aria-label="サロンの約束">
+      <p class="eyebrow">わたしたちの約束</p>
+      <p class="big">不調に振り回される日を、減らす。</p>
+      <div class="stack">
+        <div><b>整体</b><span>骨格・姿勢をととのえる</span></div>
+        <div><b>栄養相談</b><span>食べ方を一緒に見直す</span></div>
+        <div><b>運動指導</b><span>続けられる量だけ</span></div>
+        <div><b>美容機器</b><span>脂肪冷却・EMS・レッドショット</span></div>
+      </div>
+    </aside>
+  </div>
+</section>
+
+<section id="worries">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow">こんな方へ</p>
+      <h2>ひとつでも当てはまったら、ご相談ください</h2>
+    </div>
+    <ul class="worries">
+      <li>ジムやダイエットを始めても、いつも続かない</li>
+      <li>何を食べればいいのか、考えるのが面倒</li>
+      <li>肩こり・腰の重さ・むくみが、なんとなく続いている</li>
+      <li>忙しくて、自分の体のことを後回しにしている</li>
+      <li>整体、エステ、ジムをかけもちするのは大変</li>
+      <li>産後の体型や骨盤まわりが気になっている</li>
+    </ul>
+    <p class="answer">SSCは「がんばる」を前提にしません。<br>あなたに合ったやり方を、担当者が考えます。</p>
+  </div>
+</section>
+
+<section id="about">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow">SSCの特長</p>
+      <h2>ひとつのサロンで、まとめて。<br>ひとりの担当者が、最後まで。</h2>
+    </div>
+    <div class="features">
+      <div class="feature">
+        <h3>整体で土台をととのえる</h3>
+        <p>姿勢や骨盤まわりのバランスを見て、体が動きやすい状態をつくります。不調の出にくい体づくりの土台です。</p>
+      </div>
+      <div class="feature">
+        <h3>栄養相談は、引き算から</h3>
+        <p>厳しい食事制限はしません。今の食生活を伺い、無理なく変えられるところから一緒に見直します。</p>
+      </div>
+      <div class="feature">
+        <h3>運動は、続けられる量だけ</h3>
+        <p>サロンでの運動指導に加え、ご自宅でできる短いメニューをお渡しします。運動が苦手な方も大丈夫です。</p>
+      </div>
+      <div class="feature">
+        <h3>美容機器で、気になる部分を</h3>
+        <p>お腹・下半身には脂肪冷却とEMS、フェイスラインにはレッドショット。部分ごとのケアを組み合わせます。</p>
+      </div>
+      <div class="feature">
+        <h3>専属担当制</h3>
+        <p>初回から卒業まで、同じ担当者が一貫して見ます。毎回説明し直す必要がなく、変化にもすぐ気づけます。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="courses">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow">コース・料金</p>
+      <h2>まずは「からだ点検」から</h2>
+      <p class="lead">初めての方は、お試し版のからだ点検コースで体の状態を確認し、あなたに合うコースをご提案します。</p>
+    </div>
+
+    <div class="course-group">
+      <div class="group-title">
+        <h3>全身おまかせコース</h3>
+        <p>整体・栄養相談・運動指導・美容機器を組み合わせた全身ケア</p>
+      </div>
+      <div class="plans">
+        <article class="plan">
+          <span class="tag">初回限定</span>
+          <h3>からだ点検コース</h3>
+          <p class="meta">60分・お試し版</p>
+          <p class="desc">カウンセリングと体のチェック、施術の体験。</p>
+          <p class="price num">¥5,000</p>
+        </article>
+        <article class="plan featured">
+          <span class="tag">いちばん人気</span>
+          <h3>まるごとおまかせコース</h3>
+          <p class="meta">全12回・3ヶ月・週1回</p>
+          <p class="desc">週1回のペースで、生活習慣ごとしっかり見直したい方に。</p>
+          <p class="price num">¥228,000 <small>一括</small></p>
+        </article>
+        <article class="plan">
+          <h3>ラクやせ3ヶ月プログラム</h3>
+          <p class="meta">全8回・隔週</p>
+          <p class="desc">通う回数をおさえて、自分のペースで進めたい方に。</p>
+          <p class="price num">¥160,000</p>
+        </article>
+        <article class="plan">
+          <h3>キープおまかせプラン</h3>
+          <p class="meta">月2回・維持用</p>
+          <p class="desc">コース卒業後に、ととのえた体を保ちたい方に。</p>
+          <p class="price num">¥36,000 <small>/ 月</small></p>
+        </article>
+      </div>
+    </div>
+
+    <div class="course-group">
+      <div class="group-title">
+        <h3>部分ケアコース</h3>
+        <p>気になる部分だけを、短い時間で</p>
+      </div>
+      <div class="plans">
+        <article class="plan">
+          <h3>小顔ラインケアコース</h3>
+          <p class="meta">フェイスライン・45分<br>レッドショット＋整体</p>
+          <p class="price num">¥8,000〜10,000</p>
+        </article>
+        <article class="plan">
+          <h3>お腹集中シェイプコース</h3>
+          <p class="meta">お腹・60分<br>脂肪冷却＋EMS</p>
+          <p class="price num">¥12,000〜15,000</p>
+        </article>
+        <article class="plan">
+          <h3>下半身スッキリコース</h3>
+          <p class="meta">下半身・60分<br>脂肪冷却＋EMS</p>
+          <p class="price num">¥13,000〜16,000</p>
+        </article>
+      </div>
+      <p class="upsell">部分ケアで変化を感じたら、全身おまかせコースへの切り替えもご相談いただけます。</p>
+    </div>
+  </div>
+</section>
+
+<section id="postpartum" class="postpartum">
+  <div class="wrap">
+    <div class="pp-grid">
+      <div class="pp-copy">
+        <p class="eyebrow">産後ダイエットコース</p>
+        <h2>産後のからだを、<br>無理なくととのえる。</h2>
+        <span class="baby">赤ちゃん連れOK・追加料金なし</span>
+        <p>骨盤まわりと体幹の整体に、栄養相談・運動指導を組み合わせた産後の方のためのコースです。子育て中でも通いやすいよう、1回90分で組んでいます。</p>
+        <p>妊活整体から通っている方は、同じ担当者がそのまま引き継ぎます。これまでの経過を改めてお話しいただく必要はありません。</p>
+      </div>
+      <ul class="pp-list">
+        <li><b>施術室で赤ちゃんを見守れます</b>バウンサーまたはベビーベッドをご用意。授乳・おむつ替えのスペースもあります。</li>
+        <li><b>泣いたら、いったん中断</b>施術や運動を止めて対応してください。その分の時間は調整します。</li>
+        <li><b>抱っこしたままできる運動も</b>赤ちゃんを抱っこしながらできる運動メニューもご用意しています。</li>
+        <li><b>機器の使用中も安全に</b>EMSや脂肪冷却を使うときは、赤ちゃんを機器から離れた安全な場所でお預かりします。</li>
+      </ul>
+    </div>
+
+    <div class="plans pp-plans">
+      <article class="plan">
+        <span class="tag">初回限定</span>
+        <h3>産後からだ点検</h3>
+        <p class="meta">60分・お試し版</p>
+        <p class="desc">問診と体の状態の確認。医師の許可の確認もこのときに行います。</p>
+        <p class="price num">¥5,000</p>
+      </article>
+      <article class="plan featured">
+        <h3>産後ラクやせ3ヶ月プログラム</h3>
+        <p class="meta">全8回・隔週・90分</p>
+        <p class="desc">整体・栄養相談・運動指導を中心に、体の状態に合わせて組み立てます。</p>
+        <p class="price num">¥128,000 <small>（1回あたり ¥16,000）</small></p>
+      </article>
+      <article class="plan">
+        <h3>産後キープ</h3>
+        <p class="meta">プログラム修了後</p>
+        <p class="desc">キープおまかせプラン（月2回）に移行して、体の状態を保ちます。</p>
+        <p class="price num">¥36,000 <small>/ 月</small></p>
+      </article>
+    </div>
+
+    <p class="safety"><b>安全のために：</b>産後健診で医師の許可が出た後から受け付けます。初回に同意書をいただき、帝王切開後の傷の状態、腹直筋離開の有無、授乳中かどうかを確認します。脂肪冷却・EMSは使用の可否を一人ずつ確認し、使えない場合は整体・運動・栄養相談でプログラムを組みます。</p>
+  </div>
+</section>
+
+<section id="flow">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow">ご利用の流れ</p>
+      <h2>はじめての方へ</h2>
+    </div>
+    <ol class="flow">
+      <li><h3>ご予約</h3><p>からだ点検コース（初回 ¥5,000）をご予約ください。</p></li>
+      <li><h3>からだ点検</h3><p>お悩みや生活習慣を伺い、姿勢や体の状態をチェック。施術も体験いただけます。</p></li>
+      <li><h3>プランのご提案</h3><p>担当者があなたに合うコースをご提案します。その場で決める必要はありません。</p></li>
+      <li><h3>専属担当と二人三脚</h3><p>同じ担当者が卒業まで一貫して担当。経過を見ながら内容を調整します。</p></li>
+    </ol>
+  </div>
+</section>
+
+<section id="staff">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow">担当者</p>
+      <h2>あなたの専属担当</h2>
+    </div>
+    <div class="staff">
+      <div class="person">
+        <div class="avatar" aria-hidden="true">堀</div>
+        <div>
+          <h3>堀部 先生<small><span class="todo">資格名を記入</span></small></h3>
+          <p>整体・美容機器の施術と、栄養相談・運動指導を担当。SSCの栄養・運動プログラムを監修しています。</p>
+        </div>
+      </div>
+      <div class="person">
+        <div class="avatar" aria-hidden="true">大</div>
+        <div>
+          <h3>大内 先生<small><span class="todo">資格名を記入</span></small></h3>
+          <p>整体・美容機器の施術を担当。栄養相談・運動指導は、堀部先生監修のプログラムに沿って行います。妊活整体から継続される方の担当です。</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="notes">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow">ご利用にあたって</p>
+      <h2>あらかじめご確認ください</h2>
+    </div>
+    <ul class="notes">
+      <li>効果の感じ方には個人差があります。</li>
+      <li>持病のある方、服薬中の方は初回に必ずお知らせください。医療機関の受診が必要と考えられる場合は、受診を優先していただくようご案内します。</li>
+      <li>当サロンの施術は医療行為ではありません。</li>
+      <li>前払いのコースは、特定商取引法に基づき、契約書面の受領から8日以内のクーリング・オフ、および中途解約に対応しています。返金の条件は契約時に書面でご説明します。</li>
+      <li>美容機器は、体の状態によってご利用いただけない場合があります。</li>
+    </ul>
+  </div>
+</section>
+
+<section id="reserve" class="reserve">
+  <div class="wrap">
+    <div class="sec-head" style="margin-bottom:0">
+      <p class="eyebrow">ご予約・お問い合わせ</p>
+      <h2>まずは60分の<br>からだ点検から。</h2>
+      <p class="lead">初回限定 ¥5,000。無理な勧誘はいたしません。<br>産後の方は「産後からだ点検」とお伝えください。</p>
+    </div>
+    <div class="contact">
+      <dl>
+        <dt>電話</dt><dd><span class="todo">電話番号を記入</span></dd>
+        <dt>LINE</dt><dd><span class="todo">LINE ID／予約URLを記入</span></dd>
+        <dt>住所</dt><dd><span class="todo">住所を記入</span>（神泉駅・道玄坂エリア）</dd>
+        <dt>営業時間</dt><dd><span class="todo">営業時間を記入</span></dd>
+      </dl>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>SSCダイエット整体</span>
+    <span>© SSC</span>
+  </div>
+</footer>
+
+</body>
+</html>
